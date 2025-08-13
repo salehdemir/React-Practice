@@ -9,7 +9,7 @@ function App() {
   return (
     // we should have div b/c it just render one element
     <div className="App">
-     <h1 style={{color: "red"}}>Hello World</h1>
+     <h1 style={{color: "red"}}>Hello </h1>
      <p style={myStyle}>lorem dsjflkdsjfa</p>
      
     </div>
