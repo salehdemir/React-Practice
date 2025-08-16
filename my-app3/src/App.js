@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import Cart from "./cart";
+import emojipedia from "./emojipedia";
 
 function App() {
+function emojiEntry(entry){
+  return(
+    <Cart
+    key = {entry.id}
+    emoji = {entry.emoji}
+    name = {entry.name}
+    meaning = {entry.meaning}
+    />
+  )
+}
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and not save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>
+        <span>emojipedia</span>
+      </h1>
+
+      <dl className="dictionary">
+      {/* <Cart 
+      emoji = {emojipedia[0].emoji}
+      name = {emojipedia[0].name}
+      meaning = {emojipedia[0].meaning} 
+      />
+      <Cart 
+      emoji = {emojipedia[1].emoji}
+      name = {emojipedia[1].name}
+      meaning = {emojipedia[1].meaning}
+      />
+      <Cart 
+      
+      emoji = {emojipedia[2].emoji}
+      name = {emojipedia[2].name}
+      meaning = {emojipedia[2].meaning}
+       
+      /> */}
+
+      {emojipedia.map(emojiEntry)}
+      </dl>
     </div>
   );
 }

@@ -3,9 +3,20 @@ import Cart from './cart';
 import Contact from './contact';
 
 function App() {
+
+  function creatCard (entry){
+   return (
+    <Cart
+    image = {entry.img}
+    name = {entry.name}
+    desc = {entry.desc}
+    
+    />
+   )
+  }
   return (
     <div className="App">
-  <Cart 
+  {/* <Cart 
   image = {Contact[0].img}
   name = {Contact[0].name}
   desc = {Contact[0].desc}
@@ -29,7 +40,9 @@ function App() {
   image = {Contact[4].img}
   name = {Contact[4].name}
   desc = {Contact[4].desc}
-  />
+  /> */}
+
+  {Contact.map(creatCard)}
 
     </div>
   );
