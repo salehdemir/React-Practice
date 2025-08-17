@@ -13,6 +13,8 @@ function emojiEntry(entry){
     />
   )
 }
+ 
+
 
 
   return (
@@ -43,7 +45,11 @@ function emojiEntry(entry){
       {emojipedia.map(emojiEntry)}
       </dl>
     </div>
+
+    
   );
+
+  
 }
 
 export default App;
