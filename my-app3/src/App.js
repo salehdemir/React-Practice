@@ -3,6 +3,8 @@ import Cart from "./cart";
 import emojipedia from "./emojipedia";
 
 function App() {
+
+
 function emojiEntry(entry){
   return(
     <Cart
