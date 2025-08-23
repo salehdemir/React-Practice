@@ -15,6 +15,15 @@ root.render(<App />);
 reportWebVitals();
 
 
+
+
+
+
+
+
+
+
+
 // Practice
 
 // import emojipedia from "./emojipedia";
