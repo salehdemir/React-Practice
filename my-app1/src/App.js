@@ -18,7 +18,7 @@ import Register from './Register';
 
 function App() {
 
-  var register = false;
+  var register = true;
   return (
  
    <div className='container'>

@@ -1,7 +1,7 @@
 function Register(){
 return(
     <>
-    <h1>Register</h1>
+    <h1 >Register</h1>
      < input type='text' placeholder='enter your name'/>
       < input type='password' placeholder='enter your password'/>
       < input type='password' placeholder='confirm your password'/>
