@@ -13,12 +13,9 @@ function App() {
   function out (){
     hoverStyle(false)
   }
-
   function changeText(){
     second("bye")
   }
-
-
   function changedText(event){
   useName(event.target.value)
   }
@@ -29,7 +26,7 @@ function App() {
 <div> 
     <h1>{first} {name}</h1>
   <input type="text" placeholder='Enter your name' onChange={changedText}  />
-  <button onClick={changedText} onMouseOut={out} onMouseOver={hover} style={{backgroundColor : firstStyle ? "black" : "white" }}>Submit</button>
+  <button onClick={changeText} onMouseOut={out} onMouseOver={hover} style={{backgroundColor : firstStyle ? "black" : "white" }}>Submit</button>
 </div>
   );
 }
