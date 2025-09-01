@@ -1,46 +1,53 @@
-import { useState } from 'react'
-import './App.css'
-
+//CHALLENGE: Make this app work by applying what you've learnt.
+//1. When new text is written into the input, its state should be saved.
+//2. When the add button is pressed, the current data in the input should be
+//added to an array.
+//3. The <ul> should display all the array items as <li>s
+import { useState } from "react";
+import "./App.css"
 function App() {
 
-  const [isActive , setIsactive] = useState(true)
+const [inputText , setInputText] = useState("")
+const [items , setitems] = useState([])
 
-  
-
-  return (
-    <>
-<button className={isActive ? "active" : "inActive"} onClick={ ()=> setIsactive(!isActive)}>Click Me</button>
- 
-    </>
-  )
+function changeHandle(event){
+ const inputValue = event.target.value
+ setInputText(inputValue)
 }
 
-export default App
+function addItems (){
+  setitems (prev => {
+return[
+  ...prev,
+inputText
+  ]
+  },
+  setInputText("")
+)
+}
 
 
 
+  return (
+    <div className="container">
+      <div className="heading">
+        <h1>To-Do List</h1>
+      </div>
+      <div className="form">
+        <input type="text"  onChange={changeHandle} value={inputText}/>
+        <button onClick={addItems}>
+          <span>Add</span>
+        </button>
+      </div>
+      <div>
+        <ul>
+         {items.map(item =>{
+         return <li>{item}</li>
+         })}
+        </ul>
+      </div>
+    </div>
+  );
+}
 
-
-  //  1: Toggle btn
-  //  const [isVisible , setIsvisible] = useState(false)
-  //   return (
-  //   <>
-  // <button onClick={()=> setIsvisible(!isVisible)}>Toggle</button>
-
-  // {isVisible && <div>Content to show or hide</div>}
-  //   </>
-  // )
-
-
-
-// 2: input value
-  //   const [value , setValue] = useState("")
-  // function changHandle (e){
-  //  setValue(e.target.value)
-  // }
-  //   return (
-  //   <>
-  // <input type="text"  value={value} onChange={changHandle} />
- 
-  //   </>
-  // )
+export default App;
